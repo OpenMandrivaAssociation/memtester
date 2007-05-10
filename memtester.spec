@@ -1,6 +1,6 @@
 %define name memtester
 %define version 4.0.6
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name: %{name}
 Summary: Memtester is a memory tester
@@ -32,8 +32,11 @@ rm -rf $RPM_BUILD_ROOT
 %make
 
 %install
-install -m 755 -d $RPM_BUILD_ROOT%{_bindir}
+mkdir -p $RPM_BUILD_ROOT%{_bindir}
 install -m 755 memtester $RPM_BUILD_ROOT%{_bindir}
+
+mkdir -p $RPM_BUILD_ROOT%{_mandir}/man8
+install -m 644 memtester.8 $RPM_BUILD_ROOT%{_mandir}/man8/
 
 %clean
 rm -rf $RPM_BUILD_ROOT 
@@ -42,5 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc BUGS CHANGELOG COPYING README.tests README 
 %{_bindir}/*
+%{_mandir}/man8/*
 
 
