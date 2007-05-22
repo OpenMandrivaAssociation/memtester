@@ -1,16 +1,12 @@
-%define name memtester
-%define version 4.0.6
-%define release %mkrel 3
-
-Name: %{name}
-Summary: Memtester is a memory tester
-Version: %{version}
-Release: %{release}
-Source: %{name}-%{version}.tar.bz2
-Group: Monitoring
-URL: http://www.pyropus.ca/software/memtester/
-BuildRoot: %{_tmppath}/%{name}-buildroot
-License: GPL
+Summary:	Memtester is a memory tester
+Name:		memtester
+Version:	4.0.7
+Release:	%mkrel 1
+License:	GPL
+Group:		Monitoring
+URL:		http://www.pyropus.ca/software/memtester/
+Source:		http://pyropus.ca/software/memtester/old-versions/%{name}-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Memtest is a utility for testing the memory subsystem in a computer to
@@ -24,7 +20,7 @@ they run approximately an order of magnitude faster.
 
 
 %prep
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %setup -q
 
@@ -32,19 +28,17 @@ rm -rf $RPM_BUILD_ROOT
 %make
 
 %install
-mkdir -p $RPM_BUILD_ROOT%{_bindir}
-install -m 755 memtester $RPM_BUILD_ROOT%{_bindir}
+mkdir -p %{buildroot}%{_bindir}
+install -m 755 memtester %{buildroot}%{_bindir}
 
-mkdir -p $RPM_BUILD_ROOT%{_mandir}/man8
-install -m 644 memtester.8 $RPM_BUILD_ROOT%{_mandir}/man8/
+mkdir -p %{buildroot}%{_mandir}/man8
+install -m 644 memtester.8 %{buildroot}%{_mandir}/man8/
 
 %clean
-rm -rf $RPM_BUILD_ROOT 
+rm -rf %{buildroot} 
 
 %files 
 %defattr(-,root,root)
 %doc BUGS CHANGELOG COPYING README.tests README 
 %{_bindir}/*
 %{_mandir}/man8/*
-
-
