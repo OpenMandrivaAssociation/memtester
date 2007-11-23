@@ -1,6 +1,6 @@
 Summary:	Memtester is a memory tester
 Name:		memtester
-Version:	4.0.7
+Version:	4.0.8
 Release:	%mkrel 1
 License:	GPL
 Group:		Monitoring
