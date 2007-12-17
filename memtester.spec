@@ -6,7 +6,6 @@ License:	GPL
 Group:		Monitoring
 URL:		http://www.pyropus.ca/software/memtester/
 Source:		http://pyropus.ca/software/memtester/old-versions/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Memtest is a utility for testing the memory subsystem in a computer to
