@@ -15,7 +15,7 @@ determine if it is faulty. The original source was by Simon Kirby
 original source, and added many additional tests to help catch
 borderline memory. I also rewrote the original tests (which catch
 mainly memory bits which are stuck permanently high or low) so that
-they run approximately an order of magnitude faster.     
+they run approximately an order of magnitude faster.
 
 
 
@@ -35,10 +35,10 @@ mkdir -p %{buildroot}%{_mandir}/man8
 install -m 644 memtester.8 %{buildroot}%{_mandir}/man8/
 
 %clean
-rm -rf %{buildroot} 
+rm -rf %{buildroot}
 
-%files 
+%files
 %defattr(-,root,root)
-%doc BUGS CHANGELOG COPYING README.tests README 
+%doc BUGS CHANGELOG COPYING README.tests README
 %{_bindir}/*
 %{_mandir}/man8/*
