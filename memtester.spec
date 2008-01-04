@@ -1,7 +1,7 @@
 Summary:	Memtester is a memory tester
 Name:		memtester
 Version:	4.0.8
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		Monitoring
 URL:		http://www.pyropus.ca/software/memtester/
@@ -10,14 +10,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Memtest is a utility for testing the memory subsystem in a computer to
-determine if it is faulty. The original source was by Simon Kirby
-<sim@stormix.com>. I have by this time completely rewritten the
-original source, and added many additional tests to help catch
-borderline memory. I also rewrote the original tests (which catch
-mainly memory bits which are stuck permanently high or low) so that
-they run approximately an order of magnitude faster.
-
-
+determine if it is faulty.
 
 %prep
 rm -rf %{buildroot}
