@@ -1,4 +1,4 @@
-Summary:	Memtester is a memory tester
+Summary:	Memory tester
 Name:		memtester
 Version:	4.0.8
 Release:	%mkrel 2
