@@ -4,7 +4,7 @@ Version:	4.0.8
 Release:	%mkrel 5
 License:	GPL
 Group:		Monitoring
-URL:		http://www.pyropus.ca/software/memtester/
+URL:		http://pyropus.ca/software/memtester/
 Source:		http://pyropus.ca/software/memtester/old-versions/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
