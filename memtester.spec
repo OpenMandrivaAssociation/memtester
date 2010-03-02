@@ -1,6 +1,6 @@
 Summary:	Memory tester
 Name:		memtester
-Version:	4.1.2
+Version:	4.1.3
 Release:	%mkrel 1
 License:	GPLv2
 Group:		Monitoring
@@ -14,7 +14,6 @@ determine if it is faulty.
 
 %prep
 rm -rf %{buildroot}
-
 %setup -q
 
 %build
