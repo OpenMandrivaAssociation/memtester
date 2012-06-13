@@ -1,19 +1,17 @@
 Summary:	Memory tester
 Name:		memtester
-Version:	4.2.1
-Release:	%mkrel 1
+Version:	4.3.0
+Release:	1
 License:	GPLv2
 Group:		Monitoring
 URL:		http://pyropus.ca/software/memtester/
-Source:		http://pyropus.ca/software/memtester/old-versions/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+Source0:	http://pyropus.ca/software/memtester/old-versions/%{name}-%{version}.tar.gz
 
 %description
 Memtest is a utility for testing the memory subsystem in a computer to
 determine if it is faulty.
 
 %prep
-rm -rf %{buildroot}
 %setup -q
 
 %build
@@ -26,11 +24,7 @@ install -m 755 memtester %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_mandir}/man8
 install -m 644 memtester.8 %{buildroot}%{_mandir}/man8/
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc BUGS CHANGELOG COPYING README.tests README
 %{_bindir}/*
 %{_mandir}/man8/*
