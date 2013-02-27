@@ -1,3 +1,5 @@
+%define debug_package          %{nil}
+
 Summary:	Memory tester
 Name:		memtester
 Version:	4.3.0
