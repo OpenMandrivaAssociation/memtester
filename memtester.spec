@@ -1,7 +1,7 @@
 Summary:	Memory tester
 Name:		memtester
-Version:	4.3.0
-Release:	4
+Version:	4.5.1
+Release:	1
 License:	GPLv2+
 Group:		Monitoring
 Url:		http://pyropus.ca/software/memtester/
