@@ -4,7 +4,7 @@ Version:	4.6.0
 Release:	1
 License:	GPLv2+
 Group:		Monitoring
-Url:		http://pyropus.ca/software/memtester/
+Url:		https://pyropus.ca/software/memtester/
 Source0:	http://pyropus.ca/software/memtester/old-versions/%{name}-%{version}.tar.gz
 
 %description
