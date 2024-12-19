@@ -1,6 +1,6 @@
 Summary:	Memory tester
 Name:		memtester
-Version:	4.7.0
+Version:	4.7.1
 Release:	1
 License:	GPLv2+
 Group:		Monitoring
